@@ -74,7 +74,7 @@ class Results(commands.Cog):
 
 # ------------------------------------------------------------------------------------------ add -----------------------------------------------------------------------------------
 
-    @app_commands.command(name="submit_result", description="To submit results of your event!")
+    @app_commands.command(name="dev_submit_result", description="To submit results of your event!")
     @app_commands.choices(
     position = [
         app_commands.Choice(name='Winner', value='1'),
@@ -154,7 +154,7 @@ class Results(commands.Cog):
 
 # ------------------------------------------------------------------------------------------ Edit -----------------------------------------------------------------------------------
 
-    @app_commands.command(name="edit_result", description="edit submmitted result")
+    @app_commands.command(name="dev_edit_result", description="edit submmitted result")
     @app_commands.choices(
     position = [
         app_commands.Choice(name='Winner', value='1'),
@@ -223,7 +223,7 @@ class Results(commands.Cog):
 
 # ------------------------------------------------------------------------------------------ Delete -----------------------------------------------------------------------------------
 
-    @app_commands.command(name="delete_result", description="to delete a submmitted result")
+    @app_commands.command(name="dev_delete_result", description="to delete a submmitted result")
     async  def delete_results(self, interaction: discord.Interaction, result_id: int, reason : str = ""):
 
         await interaction.response.send_message("Request to delete result has been submitted successfully")
